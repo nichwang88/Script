@@ -1,0 +1,23 @@
+#!name=Custom Script. By Nicholas
+#!desc=该模块适用于Nicholas自定义的脚本。
+#!system=ios
+
+[Script]
+
+芝麻开门 = type=cron,cronexp=0 8 31 12 *,wake-system=1,script-path=opendoor.js
+
+搬瓦工流量 = type=cron,cronexp=0 21 * * *,wake-system=1,script-path=bandwagon.js
+
+京东多合一签到 = type=cron,cronexp="2 0,11 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+
+中国电信签到 = type=cron,cronexp=2 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.js
+
+京东比价 = type=http-response,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js,script-update-interval=86400
+
+酷我音乐VIP = type=http-response,pattern=^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/user\/vip|vip\/spi/mservice),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Kuwo.js,script-update-interval=86400
+酷我音乐下载 = type=http-request,pattern=^https?:\/\/musicpay\.kuwo.cn\/music\.pay\?uid=\d+,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/KuWoMusicDownload.js,script-update-interval=86400
+
+扫描全能王pro = type=http-response,pattern=^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/CamScanner.js,script-update-interval=86400
+
+[MITM]
+hostname = api.m.jd.com, vip1.kuwo.cn
