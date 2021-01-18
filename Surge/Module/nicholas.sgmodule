@@ -15,4 +15,4 @@
 中国电信签到 = type=cron,cronexp=3 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.js,script-update-interval=0
 
 [MITM]
-hostname = api.m.jd.com, vip1.kuwo.cn
+hostname = api.m.jd.com, ms.jr.jd.com, vip1.kuwo.cn
