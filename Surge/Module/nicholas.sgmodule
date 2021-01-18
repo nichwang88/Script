@@ -11,5 +11,8 @@
 
 扫描全能王pro = type=http-response,pattern=^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/CamScanner.js,script-update-interval=86400
 
+京东多合一签到 = type=cron,cronexp="2 0,11 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js,script-update-interval=0
+中国电信签到 = type=cron,cronexp=3 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.js,script-update-interval=0
+
 [MITM]
 hostname = api.m.jd.com, vip1.kuwo.cn
